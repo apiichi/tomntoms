@@ -1,0 +1,1395 @@
+@charset "utf-8";
+
+#wrap {
+	width: 100%;
+	min-width: 1300px;
+}
+/* ----------------헤더영역---------------- */
+header {
+	position: relative;
+	width: 100%;
+	height: 134px;
+	z-index: 900;
+}
+header > .header-container {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 134px;
+	background-color: #fff;
+	transition: all 0.5s;
+}
+header > .header-container.down {
+	height: 100px;
+	box-shadow: 0 5px 10px rgb(158, 158, 158);
+}
+header > .header-container > div {
+	position: relative;
+	width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+}
+/* 로고 */
+header > .header-container > div > #logo {
+	position: absolute;
+	left: 0;
+	top: 20px;
+	width: 135px;
+	height: 94px;
+	transition: all 0.5s;
+}
+header > .header-container > div > #logo > a {
+	display: block;
+	width: 95px;
+	height: 94px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-head-logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+header > .header-container.down > div > #logo {
+	width: 75px;
+	height: 74px;
+}
+header > .header-container.down > div > #logo > a {
+	width: 75px;
+	height: 74px;
+}
+/* 메뉴버튼 */
+header > .header-container > div > .nav-btn {
+	display: none;
+}
+/* 서브메뉴 */
+header > .header-container > div > .sub {
+	position: absolute;
+	top: 26px;
+	right: 142px;
+}
+header > .header-container > div > .sub > li {
+	float: left;
+}
+header > .header-container > div > .sub > li > a {
+	display: block;
+	height: 12px;
+	line-height: 12px;
+	padding: 0 10px;
+	color: #666;
+	font-size: 14px;
+	border-right: 1px solid #b1b1b1;
+}
+/* nav*/
+header > .header-container > div > nav {
+	z-index: 1000;
+}
+header > .header-container > div > nav > .nav-clse {
+	display: none;
+}
+/* 메인메뉴(gnb) */
+header > .header-container > div > nav > .gnb {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	width: 700px;
+	height: 30px;
+}
+header > .header-container > div > nav > .gnb > li {
+	position: relative;
+}
+header > .header-container > div > nav > .gnb > li > a {
+	display: block;
+	height: 30px;
+	color: #000;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	line-height: 30px;
+}
+header > .header-container > div > nav > .gnb > li.on > a {
+	color: #572a31;
+}
+/* 메인 서브메뉴(lnb) */
+header > .header-container > div > nav > .gnb > li > .lnb {
+	display: none;
+	position: absolute;
+	top: 40px; /*(100-30-60)+30*/
+	right: 50%;
+	width: 100%;
+	padding: 60px 0;
+	background-color: #fff;
+	box-shadow: 1px -1px 5px #d9d9d9;
+}
+header > .header-container > div > nav > .gnb > li:nth-child(1) > .lnb {
+	margin-right: -63px;
+	width: 125px;
+}
+header > .header-container > div > nav > .gnb > li:nth-child(3) > .lnb {
+	margin-right: -98px;
+	width: 196px;
+}
+header > .header-container > div > nav > .gnb > li:nth-child(4) > .lnb {
+	margin-right: -111px;
+	width: 222px;
+}
+header > .header-container > div > nav > .gnb > li:nth-child(5) > .lnb {
+	margin-right: -95px;
+	width: 191px;
+}
+header > .header-container > div > nav > .gnb > li:nth-child(6) > .lnb {
+	right: -15px;
+	width: 161px;
+}
+header > .header-container > div > nav > .gnb > li > .lnb > li {
+	padding: 0 30px;
+}
+header > .header-container > div > nav > .gnb > li > .lnb > li > a {
+	display: block;
+	height: 35px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 35px;
+}
+header > .header-container > div > nav > .gnb > li > .lnb > li.on > a {
+	text-decoration: underline;
+}
+/* 언어메뉴 */
+header > .header-container > div > nav > .lang {
+	position: absolute;
+	right: 0;
+	top: 26px;
+	margin-right: -10px;
+}
+header > .header-container > div > nav > .lang > li {
+	float: left;
+}
+header > .header-container > div > nav > .lang > li.kor {
+	display: none;
+}
+header > .header-container > div > nav > .lang > li > a {
+	display: block;
+	height: 12px;
+	padding: 0 10px;
+	color: #666;
+	line-height: 12px;
+	font-size: 14px;
+	border-right: 1px solid #b1b1b1;
+}
+header > .header-container > div > nav > .lang > li:last-child > a {
+	border-right: 0;
+}
+/* 이벤트 */
+header > .event-container {
+	position: absolute;
+	right: 15px;
+	top: -50px;
+	width: 190px; /*15+180*/
+	height: 189px; /*15+174*/
+	z-index: 900;
+}
+header > .event-container > .event-clse {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 15px;
+	height: 15px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-foot-event_btn_clse.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+header > .event-container > .event {
+	display: block;
+	width: 180px;
+	height: 174px;
+	margin-top: 15px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-foot-event.png);
+	background-repeat: no-repeat;
+}
+/* ----------------섹션영역---------------- */
+/* 섹션 - 메인슬라이드 */
+section > .main_visual {
+	position: relative;
+	width: 100%;
+	height: 760px; /*700+60*/
+}
+/* 메인슬라이드 - 컨테이너 */
+section > .main_visual > .main_visual-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 700px;
+}
+section > .main_visual > .main_visual-container > li {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+section > .main_visual > .main_visual-container > li:nth-child(1) {
+	display: block;
+	background-image: url(../images/toms-sect1-slide1.jpg);
+}
+section > .main_visual > .main_visual-container > li:nth-child(2) {
+	background-image: url(../images/toms-sect1-slide2.jpg);
+}
+section > .main_visual > .main_visual-container > li:nth-child(3) {
+	background-image: url(../images/toms-sect1-slide3.jpg);
+}
+section > .main_visual > .main_visual-container > li:nth-child(4) {
+	background-image: url(../images/toms-sect1-slide4.jpg);
+}
+section > .main_visual > .main_visual-container > li > a {
+	text-indent: -9999px;
+}
+section > .main_visual > .main_visual-navi {
+	position: absolute;
+	left: 10px;
+	bottom: 80px;
+	width: 470px;
+	height: 30px;
+}
+section > .main_visual > .main_visual-navi.bg {
+	background-color: rgba(209, 209, 209, 0.4);
+	border-radius: 5px;
+}
+/* 메인슬라이드 - 페이지 */
+section > .main_visual > .main_visual-navi > .main_visual-page {
+	position: absolute;
+	left: 5px;
+	top: 50%;
+	width: 30px;
+	height: 15px;
+	margin-top: -8px;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 15px;
+}
+/* 메인슬라이드 - 인디케이터 */
+section > .main_visual > .main_visual-navi > .main_visual-indicator {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 55px;
+	top: 50%;
+	height: 15px;
+	margin-top: -8px;
+}
+section > .main_visual > .main_visual-navi > .main_visual-indicator > li {
+	width: 90px;
+	margin-right: 5px;
+}
+section > .main_visual > .main_visual-navi > .main_visual-indicator > li:last-child {
+	margin-right: 0;
+}
+section > .main_visual > .main_visual-navi > .main_visual-indicator > li > a {
+	display: block;
+	text-indent: -9999px;
+	height: 2px;
+	background-color: #fff;
+}
+section > .main_visual > .main_visual-navi > .main_visual-indicator > li.on > a {
+	background-color: #000;
+}
+/* 메인슬라이드 - 재생정지 버튼 */
+section > .main_visual > .main_visual-navi > .main_visual-btn {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 450px;
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-btn_play.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+section > .main_visual > .main_visual-navi > .pause {
+	background-image: url(../images/toms-btn_pause.png);
+}
+/* 메인슬라이드 - 공지 */
+section > .main_visual > .main_visual-notice {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 700px;
+	width: 100%;
+	height: 60px;
+	background-color: #572a31;
+}
+section > .main_visual > .main_visual-notice > div {
+	position: relative;
+	width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+}
+section > .main_visual > .main_visual-notice > div:before {
+	position: absolute;
+	left: 41px;
+	top: 50%;
+	width: 37px;
+	height: 35px;
+	margin-top: -18px;
+	background-image: url(../images/toms-sect1-notice_ico.png);
+	background-repeat: no-repeat;
+	content: "";
+}
+section > .main_visual > .main_visual-notice > div > ul {
+	position: absolute;
+	left: 120px;
+	top: 0px;
+	width: 1280px;
+	height: 60px;
+}
+section > .main_visual > .main_visual-notice > div > ul > li {
+	display: flex;
+	float: left;
+	width: 50%;
+	height: 60px;
+	color: #fff;
+}
+section > .main_visual > .main_visual-notice > div > ul > li > .txt {
+	overflow: hidden;
+	width: 420px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 60px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+section > .main_visual > .main_visual-notice > div > ul > li > .date {
+	width: 100px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 60px;
+}
+section > .main_visual > .main_visual-notice > div > ul > li > .plus {
+	width: 17px;
+	height: 17px;
+	margin-top: 22px; /*(60-17)/2*/
+	text-indent: -9999px;
+	background-image: url(../images/toms-sect1-notice-plus_ico.png);
+	background-repeat: no-repeat;
+}
+/* ---------------------------------------------아티클 공통 */
+section > article {
+	position: relative;
+	width: 100%;
+}
+section > article > div > .tit {
+	position: relative;
+	margin: 0 auto;
+}
+section > article > div > .tit > h2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+}
+/* ---------------------------------------------슬라이드 공통 */
+section > article > div > .slides {
+	width: 100%;
+	height: 670px;
+	margin: 50px auto 0;
+}
+section > article > div > .slides > .slides-pagination {
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+	right: 15px;
+	top: 30px;
+	height: 14px;
+}
+section > .menu > div > .slides > .slides-pagination {
+	width: 160px;
+}
+section > .md > div > .slides > .slides-pagination {
+	width: 230px;
+}
+/* 슬라이드 - 페이지 */
+section > article > div > .slides > .slides-pagination > .slides-pagination-page {
+	line-height: 14px;
+	font-weight: 800;
+	font-size: 16px;
+}
+/* 슬라이드 - 인디케이터 */
+section > article > div > .slides > .slides-pagination > .slides-pagination-indicator {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section > article > div > .slides > .slides-pagination > .slides-pagination-indicator > li {
+	width: 14px;
+}
+section > article > div > .slides > .slides-pagination > .slides-pagination-indicator > li > a {
+	display: block;
+	text-indent: -9999px;
+	height: 14px;
+	background-color: #d4d4d4;
+	border-radius: 50%;
+}
+section > article > div > .slides > .slides-pagination > .slides-pagination-indicator > li.on > a {
+	background-color: #572a31;
+}
+/* 슬라이드 - 재생정지 버튼 */
+section > article > div > .slides > .slides-pagination > .slides-pagination-btn {
+	display: block;
+	width: 14px;
+	height: 14px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-btn_play.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+section > article > div > .slides > .slides-pagination > .pause {
+	background-image: url(../images/toms-btn_pause.png);
+}
+/* 슬라이드 - 컨테이너 */
+section > article > div > .slides > div {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+section > article > div > .slides > div > .slides-container {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+section > article > div > .slides > div > .slides-container > li {
+	position: relative;
+	width: 33.3333%;
+	height: 550px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+section > article > div > .slides > div > .slides-container > li:hover {
+	outline: 1px solid #b1b1b1;
+	outline-offset: -15px;
+}
+section > article > div > .slides > div > .slides-container > li > a {
+	display: block;
+	height: 650px;
+}
+section > article > div > .slides > div > .slides-container > li > a > p {
+	display: block;
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	font-weight: 800;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: -1px;
+}
+/*슬라이드 - 이전다음 버튼 */
+section > article > div > .slides > div > .slides-navi {
+	display: block;
+	position: absolute;
+	top: 50%;
+	width: 22px;
+	height: 35px;
+	margin-top: -68px;
+	text-indent: -9999px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+section > article > div > .slides > div > .prev {
+	left: 15px;
+	background-image: url(../images/toms-btn_prev.png);
+}
+section > article > div > .slides > div > .next {
+	right: 15px;
+	background-image: url(../images/toms-btn_next.png);
+}
+/* ---------------------------------------------섹션2 - menu */
+section > .menu {
+	display: none;
+	width: 1300px;
+	height: 740px;
+	margin: 150px auto 50px;
+}
+section > .menu > div > .tit {
+	width: 458px;
+	height: 37px;
+}
+section > .menu > div > .tit > h2 {
+	background-image: url(../images/toms-sect2-menu_tit.png);
+}
+section > .menu > div > .slides > .slides-pagination > .slides-pagination-page {
+	right: 116px; /*29+15+72*/
+	width: 35px;
+}
+section > article > div > .slides > .slides-pagination > .slides-pagination-indicator {
+	right: 29px; /*14+15*/
+	width: 72px; /*(14*3)+(15*2)*/
+}
+section > .menu > div > .slides > div > .slides-container > li:nth-child(1) {
+	background-image: url(../images/toms-sect2-menu1.jpg);
+}
+section > .menu > div > .slides > div > .slides-container > li:nth-child(2) {
+	background-image: url(../images/toms-sect2-menu2.jpg);
+}
+section > .menu > div > .slides > div > .slides-container > li:nth-child(3) {
+	background-image: url(../images/toms-sect2-menu3.jpg);
+}
+section > .menu > div > .slides > div > .slides-navi {
+	display: none;
+}
+/* ---------------------------------------------섹션3 - brand */
+section > .brand {
+	display: none;
+	/* overflow: hidden; */
+	position: relative;
+	height: 601px;
+	background-image: url(../images/toms-sect3-brand_bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+section > .brand > div {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 750px;
+	height: 100%;
+}
+section > .brand > div > h2 {
+	position: absolute;
+	top: 140px;
+	left: 0;
+	width: 700px;
+	height: 50px;
+	color: #572a31;
+	font-size: 46px;
+}
+section > .brand > div > .frame {
+	display: block;
+	position: absolute;
+	top: 220px;
+	left: 0;
+	width: 450px;
+}
+section > .brand > div > .frame > img {
+	display: block;
+	width: 100%;
+}
+section > .brand > div > p {
+	display: block;
+	position: absolute;
+	top: 330px;
+	left: 0;
+	width: 720px;
+	color: #572a31;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.5;
+}
+section > .brand > div > .brand-btn {
+	position: absolute;
+	top: 490px;
+	left: 0;
+	width: 596px;
+	height: 62px;
+}
+section > .brand > div > .brand-btn > .member {
+	display: block;
+	float: left;
+	width: 190px;
+	height: 60px;
+	color: #fff;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+	background-color: #572a31;
+}
+section > .brand > div > .brand-btn > div > a {
+	display: block;
+	float: left;
+	width: 190px;
+	height: 60px;
+	margin-left: 10px;
+	color: #572a31;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+	background-color: #ece0db;
+	border: 1px solid #572a31;
+	box-sizing: border-box;
+}
+/* ---------------------------------------------섹션4 - md */
+section > .md {
+	display: none;
+	width: 1300px;
+	height: 740px;
+	margin: 140px auto 100px;
+}
+section > .md > div > .tit {
+	width: 558px;
+	height: 38px;
+}
+section > .md > div > .tit > h2 {
+	background-image: url(../images/toms-sect4-md_tit.png);
+}
+section > .md > div > .slides > .slides-pagination > .slides-pagination-page {
+	right: 174px; /*29+15+130*/
+	width: 35px;
+}
+section > .md > div > .slides > .slides-pagination > .slides-pagination-indicator {
+	right: 29px; /*14+15*/
+	width: 130px; /*(14*5)+(15*4)*/
+}
+section > .md > div > .slides > div > .slides-container {
+	width: calc(33.3333% * 5);
+}
+section > .md > div > .slides > div > .slides-container > li:nth-child(1) {
+	background-image: url(../images/toms-sect2-md1.jpg);
+}
+section > .md > div > .slides > div > .slides-container > li:nth-child(2) {
+	background-image: url(../images/toms-sect2-md2.jpg);
+}
+section > .md > div > .slides > div > .slides-container > li:nth-child(3) {
+	background-image: url(../images/toms-sect2-md3.jpg);
+}
+section > .md > div > .slides > div > .slides-container > li:nth-child(4) {
+	background-image: url(../images/toms-sect2-md4.jpg);
+}
+section > .md > div > .slides > div > .slides-container > li:nth-child(5) {
+	background-image: url(../images/toms-sect2-md5.jpg);
+}
+/*--------------------------------------------- 섹션5 - sns */
+section > .sns {
+	display: none;
+	width: 1300px;
+	margin: 0 auto 130px;
+}
+section > .sns > div > .tit {
+	width: 450px;
+	height: 37px;
+	margin-bottom: 40px;
+}
+section > .sns > div > .tit > h2 {
+	background-image: url(../images/toms-sect5-sns_tit.png);
+}
+section > .sns > div > .sns-container {
+	overflow: hidden;
+	width: 100%;
+}
+section > .sns > div > div > .sns-container > li {
+	overflow: hidden;
+	float: left;
+	width: 20%;
+}
+section > .sns > div > div > .sns-container > li > a > img {
+	display: block;
+	width: 100%;
+	transition: all 0.8s;
+}
+section > .sns > div > div > .sns-container > li > a:hover > img {
+	transform: scale(1.1);
+}
+/* ----------------푸터영역---------------- */
+footer {
+	width: 100%;
+	height: 400px;
+	background-color: #efefef;
+}
+/* 챗봇 */
+footer > .chatbot {
+	display: block;
+	position: fixed;
+	right: 12px;
+	bottom: 110px;
+	width: 90px;
+	height: 90px;
+	text-indent: -9999px;
+	background-image: url(../images/toms-foot-chatbot.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 1000;
+}
+/* 최상위로 */
+footer > .goTop {
+	display: none;
+	position: fixed;
+	right: 12px;
+	bottom: 50px;
+	width: 45px;
+	height: 45px;
+	text-indent: -9999px;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-image: url(../images/toms-foot-goTop.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 1000;
+}
+footer > .goTop:hover {
+	background-color: rgb(0, 0, 0);
+}
+footer > .footer-container {
+	position: relative;
+	width: 1300px;
+	height: 100%;
+	margin: 0 auto;
+}
+/* 고객만족센터 */
+footer > .footer-container > .cs {
+	position: absolute;
+	top: 100px;
+	left: 0;
+}
+footer > .footer-container > .cs > p {
+	margin-bottom: 20px;
+	color: #572a31;
+	font-size: 16px;
+}
+footer > .footer-container > .cs > a {
+	color: #572a31;
+	font-size: 32px;
+}
+/* 푸터메뉴 */
+footer > .footer-container > nav > .fnb {
+	display: flex;
+	flex-flow: row wrap;
+	position: absolute;
+	left: 400px;
+	top: 100px;
+	width: 420px;
+}
+footer > .footer-container > nav > .fnb > li {
+	position: relative;
+	margin-right: 18px;
+}
+footer > .footer-container > nav > .fnb > li:before {
+	position: absolute;
+	right: -9px;
+	top: 0;
+	width: 2px;
+	height: 2px;
+	content: "•";
+}
+footer > .footer-container > nav > .fnb > li:nth-child(5):before,
+footer > .footer-container > nav > .fnb > li:nth-child(8):before {
+	display: none;
+}
+footer > .footer-container > nav > .fnb > li > a {
+	display: block;
+	height: 30px;
+	color: #572a31;
+	font-size: 15px;
+}
+/* 주소 */
+footer > .footer-container > address {
+	position: absolute;
+	left: 400px;
+	top: 210px; /* 100+60 */
+	width: 600px;
+	color: #8a8a8a;
+}
+footer > .footer-container > address > div > p {
+	float: left;
+	font-size: 14px;
+	margin-right: 10px;
+}
+footer > .footer-container > address > span {
+	display: block;
+	margin-top: 20px;
+	font-size: 14px;
+}
+/* 공유하기 */
+footer > .footer-container > .share {
+	display: flex;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	height: 36px;
+}
+footer > .footer-container > .share > p {
+	color: #666;
+	padding-right: 20px;
+	font-size: 15px;
+	line-height: 36px;
+}
+footer > .footer-container > .share > a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	text-indent: -9999px;
+	margin-left: 5px;
+	background-repeat: no-repeat;
+}
+footer > .footer-container > .share > a:nth-of-type(1) {
+	background-image: url(../images/toms-foot-share_instagram.png);
+}
+footer > .footer-container > .share > a:nth-of-type(2) {
+	background-image: url(../images/toms-foot-share_facebook.png);
+}
+footer > .footer-container > .share > a:nth-of-type(3) {
+	background-image: url(../images/toms-foot-share_youtube.png);
+}
+footer > .footer-container > .share > a:nth-of-type(4) {
+	background-image: url(../images/toms-foot-share_blog.png);
+}
+/* 랭귀지 */
+footer > .footer-container > .lang {
+	display: none;
+}
+
+@media screen and (max-width: 786px) {
+	#wrap {
+		overflow: hidden;
+		min-width: 360px;
+	}
+	/* ----------------헤더영역---------------- */
+	header {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 60px;
+	}
+	header > .header-container {
+		position: initial;
+		width: 100%;
+		height: 60px;
+		transition: none;
+	}
+	header > .header-container.down {
+		height: 100%;
+	}
+	header > .header-container > div {
+		width: 100%; /*수정*/
+	}
+	/* m-로고 */
+	header > .header-container > div > #logo {
+		left: 50%;
+		top: 50%;
+		width: 46px;
+		height: 46px;
+		margin: -23px 0 0 -23px;
+	}
+	header > .header-container > div > #logo > a {
+		width: 100%;
+		height: 100%;
+		transition: none;
+	}
+	header > .header-container.down > div > #logo {
+		width: 46px;
+		height: 46px;
+	}
+	header > .header-container.down > div > #logo > a {
+		width: 100%;
+		height: 100%;
+	}
+	/* m-메뉴버튼 */
+	header > .header-container > div > .nav-btn {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 16px;
+		width: 26px;
+		height: 35px;
+		margin-top: -18px;
+		text-indent: -9999px;
+		background: none;
+		background-image: url(../images/toms-head-nav_m.png);
+		background-repeat: no-repeat;
+		border: none;
+		outline: none;
+	}
+	/* m-서브메뉴 */
+	header > .header-container > div > .sub {
+		top: 50%;
+		right: 16px;
+		height: 26px;
+		margin: -13px 0 0 0;
+	}
+	header > .header-container > div > .sub > li {
+		float: initial;
+		width: 23px;
+	}
+	header > .header-container > div > .sub > li:nth-child(1) {
+		display: none;
+	}
+	header > .header-container > div > .sub > li > a {
+		height: 26px;
+		text-indent: -9999px;
+		background-image: url(../images/toms-head-sub-mall_m.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		border-right: 0;
+	}
+	/* m-메인메뉴 */
+	header > .header-container > div > .nav-bg {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	header > .header-container > div > nav {
+		display: none;
+		position: fixed;
+		/* left: 0; */
+		left: -270px;
+		top: 0;
+		width: 270px;
+		height: 100%;
+		background-color: #fff;
+	}
+	header > .header-container > div > nav:before {
+		position: absolute;
+		left: 50%;
+		top: 24px;
+		width: 162px;
+		height: 20px;
+		margin-left: -81px;
+		background-image: url(../images/nav_logo_m.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: "";
+	}
+	header > .header-container > div > nav > .nav-clse {
+		display: block;
+		position: absolute;
+		top: 15px;
+		left: 280px;
+		width: 25px;
+		height: 25px;
+		text-indent: -9999px;
+		background-image: url(../images/toms-head-nav-clse_m.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	/* m-메인메뉴(gnb) */
+	header > .header-container > div > nav > .gnb {
+		display: block;
+		position: initial;
+		width: 100%;
+		height: initial;
+		margin-top: 60px;
+	}
+	header > .header-container > div > nav > .gnb > li {
+		position: initial;
+		width: 100%;
+		border-top: 1px solid #d9d9d9;
+	}
+	header > .header-container > div > nav > .gnb > li:last-child {
+		border-bottom: 1px solid #d9d9d9;
+	}
+	header > .header-container > div > nav > .gnb > li > a {
+		position: relative;
+		height: 50px;
+		padding-left: 15px;
+		font-size: 16px;
+		line-height: 50px;
+	}
+	header > .header-container > div > nav > .gnb > li.on > a {
+		color: #fff;
+		background-color: #572a31;
+	}
+	header > .header-container > div > nav > .gnb > li > a:before {
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		width: 16px;
+		height: 8px;
+		margin-top: -4px;
+		background-image: url(../images/toms_nav_down-m.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: "";
+	}
+	header > .header-container > div > nav > .gnb > li:nth-child(2) > a:before {
+		display: none;
+	}
+	header > .header-container > div > nav > .gnb > li.on > a:before {
+		background-image: url(../images/toms_nav_up-m.png);
+	}
+	/* m-메인 서브메뉴(lnb) */
+	header > .header-container > div > nav > .gnb > li > .lnb {
+		position: initial;
+		padding: 0;
+		background-color: #f6f6f6;
+		box-shadow: none;
+	}
+	header > .header-container > div > nav > .gnb > li:nth-child(1) > .lnb,
+	header > .header-container > div > nav > .gnb > li:nth-child(3) > .lnb,
+	header > .header-container > div > nav > .gnb > li:nth-child(4) > .lnb,
+	header > .header-container > div > nav > .gnb > li:nth-child(5) > .lnb,
+	header > .header-container > div > nav > .gnb > li:nth-child(6) > .lnb {
+		width: 100%;
+	}
+	header > .header-container > div > nav > .gnb > li > .lnb > li {
+		padding-right: 0;
+		border-top: 1px solid #e6e5e5;
+	}
+	header > .header-container > div > nav > .gnb > li > .lnb > li > a {
+		color: #555;
+		height: 45px;
+		font-size: 14px;
+		line-height: 45px;
+	}
+	header > .header-container > div > nav > .gnb > li > .lnb > li.on > a {
+		text-decoration: none;
+	}
+	/* m-언어메뉴 */
+	header > .header-container > div > nav > .lang {
+		position: initial;
+		width: 240px;
+		height: 30px;
+		margin: 30px auto 0;
+	}
+	header > .header-container > div > nav > .lang > li.kor {
+		display: block;
+	}
+	header > .header-container > div > nav > .lang > li > a {
+		font-size: 13px;
+	}
+	/* m-이벤트 */
+	header > .event-container {
+		display: none;
+	}
+	/* ----------------m-섹션영역---------------- */
+	/* m-섹션 - 메인슬라이드 */
+	section > .main_visual {
+		height: 1040px;
+	}
+	/* m-메인슬라이드 - 컨테이너 */
+	section > .main_visual > .main_visual-container {
+		height: 980px;
+	}
+	section > .main_visual > .main_visual-container > li:nth-child(1) {
+		background-image: url(../images/toms-sect1-slide1_m.jpg);
+	}
+	section > .main_visual > .main_visual-container > li:nth-child(2) {
+		background-image: url(../images/toms-sect1-slide2_m.jpg);
+	}
+	section > .main_visual > .main_visual-container > li:nth-child(3) {
+		background-image: url(../images/toms-sect1-slide3_m.jpg);
+	}
+	section > .main_visual > .main_visual-container > li:nth-child(4) {
+		background-image: url(../images/toms-sect1-slide4_m.jpg);
+	}
+	section > .main_visual > .main_visual-navi {
+		width: 255px;
+	}
+	/* m-메인슬라이드 - 페이지 */
+	section > .main_visual > .main_visual-navi > .main_visual-page {
+		display: none;
+	}
+	/* m-메인슬라이드 - 인디케이터 */
+	section > .main_visual > .main_visual-navi > .main_visual-indicator {
+		left: 50%;
+		width: 215px;
+		margin-left: -108px;
+	}
+	section > .main_visual > .main_visual-navi > .main_visual-indicator > li {
+		width: 50px;
+	}
+	/* m-메인슬라이드 - 재생정지 버튼 */
+	section > .main_visual > .main_visual-navi > .main_visual-btn {
+		display: none;
+	}
+	/* m-메인슬라이드 - 공지 */
+	section > .main_visual > .main_visual-notice {
+		top: 980px;
+	}
+	section > .main_visual > .main_visual-notice > div {
+		width: 100%;
+	}
+	section > .main_visual > .main_visual-notice > div:before {
+		left: 16px;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+		background-size: contain;
+	}
+	section > .main_visual > .main_visual-notice > div > ul {
+		left: 62px;
+		width: 100%;
+	}
+	section > .main_visual > .main_visual-notice > div > ul > li {
+		position: relative;
+		float: initial;
+		width: 100%;
+	}
+	section > .main_visual > .main_visual-notice > div > ul > li > .txt {
+		width: 320px;
+		margin-right: 16px;
+		font-size: 14px;
+	}
+	section > .main_visual > .main_visual-notice > div > ul > li > .date {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 80px;
+		margin-right: 120px;
+		font-size: 14px;
+	}
+	section > .main_visual > .main_visual-notice > div > ul > li > .plus {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-right: 100px;
+	}
+	/* ---------------------------------------------m-아티클 공통 */
+	section > article > div {
+		padding: 0 10px;
+	}
+	section > article > div > .tit > h2 {
+		background-size: contain;
+	}
+	/*
+	--------------------------------------------m-슬라이드 공통 */
+	section > article > div > .slides {
+		height: 650px;
+		margin-top: 90px;
+	}
+	/* m-슬라이드 - 페이지+인디케이터+재생정지버튼 */
+	section > article > div > .slides > .slides-pagination {
+		display: none;
+	}
+	/* m-슬라이드 - 컨테이너 */
+	section > article > div > .slides > .slides-container > li {
+		height: 760px;
+	}
+	section > article > div > .slides > .slides-container > li:hover {
+		outline: none;
+	}
+	section > article > div > .slides > div > .slides-container > li > a {
+		font-size: 18px;
+	}
+	/*m-슬라이드 - 이전다음 버튼 */
+	section > article > div > .slides > div > .slides-navi {
+		width: 18px;
+		height: 30px;
+		margin-top: -65px;
+	}
+	/* ---------------------------------------------m-섹션2 - menu */
+	section > .menu {
+		width: 100%;
+		height: 774px;
+	}
+	section > .menu > div > .tit {
+		width: 400px;
+		height: 33px;
+	}
+	section > .menu > div > .slides > div > .slides-container {
+		position: absolute;
+		left: 0;
+		width: 300%;
+	}
+	section > .menu > div > .slides > div > .slides-container > li {
+		width: calc(100% / 3);
+	}
+	section > .menu > div > .slides > div > .slides-navi {
+		display: block;
+	}
+	/* ---------------------------------------------m-섹션3 - brand */
+	section > .brand {
+		height: 1000px;
+		background-image: url(../images/toms-sect3-brand_bg_m.jpg);
+		background-position-y: 100%;
+		background-size: cover;
+	}
+	section > .brand > div {
+		position: initial;
+		width: 100%;
+	}
+	section > .brand > div > h2 {
+		top: 170px;
+		left: 50%;
+		width: 560px;
+		height: initial;
+		margin-left: -285px;
+		font-size: 34px;
+		text-align: center;
+	}
+	section > .brand > div > .frame {
+		top: 225px;
+		left: 50%;
+		width: 320px;
+		margin-left: -160px;
+	}
+	section > .brand > div > p {
+		top: 300px;
+		left: 50%;
+		width: 510px;
+		margin-left: -255px;
+		font-size: 17px;
+		line-height: 1.8;
+		text-align: center;
+	}
+	section > .brand > div > .brand-btn {
+		top: 430px;
+		left: 50%;
+		width: 450px;
+		height: 120px; /*55+10+55*/
+		margin-left: -225px;
+	}
+	section > .brand > div > .brand-btn > .member {
+		width: 450px;
+		height: 55px;
+		font-size: 20px;
+		line-height: 55px;
+	}
+	section > .brand > div > .brand-btn > div > a {
+		width: 220px; /*220+10+220*/
+		height: 55px;
+		line-height: 55px;
+		font-size: 20px;
+	}
+	section > .brand > div > .brand-btn > div > a:first-child {
+		margin-left: 0;
+		position: absolute;
+		left: 0;
+		top: 65px;
+	}
+	section > .brand > div > .brand-btn > div > a:last-child {
+		position: absolute;
+		right: 0;
+		top: 65px;
+	}
+	/* ---------------------------------------------m-섹션4 - md */
+	section > .md {
+		width: 100%;
+		height: 774px;
+		margin-top: 120px;
+	}
+	section > .md > div > .tit {
+		width: 485px;
+		height: 33px;
+	}
+	section > .md > div > .slides > div > .slides-container {
+		width: 500%;
+	}
+	section > .md > div > .slides > div > .slides-container > li {
+		width: calc(100% / 5);
+	}
+	/* ---------------------------------------------m-섹션5 - sns */
+	section > .sns {
+		width: 100%;
+		margin-bottom: 100px;
+	}
+	section > .sns > div > .tit {
+		position: relative;
+		width: 400px;
+		height: 33px;
+	}
+	section > .sns > div > div > .sns-container > li {
+		width: 33.33333%;
+	}
+	section > .sns > div > div > .sns-container > li > a > img {
+		transition: none;
+	}
+	section > .sns > div > div > .sns-container > li > a:hover > img {
+		transform: none;
+	}
+	/* ----------------m-푸터영역---------------- */
+	footer {
+		height: 510px;
+	}
+	/* 챗봇 */
+	footer > .chatbot {
+		width: 80px;
+		height: 80px;
+	}
+	footer > .footer-container {
+		width: 100%;
+	}
+	/* 고객만족센터 */
+	footer > .footer-container > .cs {
+		top: 170px;
+		left: 16px;
+	}
+	footer > .footer-container > .cs > p {
+		margin-bottom: 0;
+		font-size: 13px;
+	}
+	footer > .footer-container > .cs > a {
+		font-size: 25px;
+	}
+	/* 푸터메뉴 */
+	footer > .footer-container > nav > .fnb {
+		top: 240px;
+		left: 16px;
+	}
+	footer > .footer-container > nav > .fnb > li > a {
+		height: 24px;
+		font-size: 13px;
+	}
+	/* 주소 */
+	footer > .footer-container > address {
+		top: 330px;
+		left: 16px;
+		width: 550px;
+	}
+	footer > .footer-container > address > div > p {
+		font-size: 13px;
+		line-height: 1.8;
+		margin-right: 0;
+	}
+	footer > .footer-container > address > span {
+		width: 450px;
+		font-size: 13px;
+		margin-top: 15px;
+	}
+	/* 공유하기 */
+	footer > .footer-container > .share {
+		top: 40px;
+		right: initial;
+		left: 16px;
+		height: 30px;
+	}
+	footer > .footer-container > .share > p {
+		padding-right: 8px;
+		font-size: 13px;
+		line-height: 30px;
+	}
+	footer > .footer-container > .share > a {
+		width: 30px;
+		height: 30px;
+		background-size: cover;
+	}
+	/* 랭귀지 */
+	footer > .footer-container > .lang {
+		display: block;
+		position: absolute;
+		left: 16px;
+		top: 100px;
+	}
+	footer > .footer-container > .lang > p {
+		color: #666;
+		font-size: 15px;
+	}
+	footer > .footer-container > .lang > a {
+		display: inline-block;
+		margin-right: 10px;
+		margin-top: 5px;
+		color: #333;
+		font-size: 15px;
+	}
+}
